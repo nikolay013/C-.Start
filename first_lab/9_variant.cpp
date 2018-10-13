@@ -1,4 +1,4 @@
-#include <iostream>
+#include <iostream>				//Taylor Rows math.
 #include <cmath>
 using namespace std;
 
@@ -14,28 +14,28 @@ int main()
 
 
 	cout << "Input x (-1 < x < 1): ";
-	cin >> x;															//Ввод значения x
+	cin >> x;															//Г‚ГўГ®Г¤ Г§Г­Г Г·ГҐГ­ГЁГї x
 	cout << "Input epsilon (0 < epsilon < 0.01): ";
-	cin >> epsilon;														//Ввод значения epsilon
+	cin >> epsilon;														//Г‚ГўГ®Г¤ Г§Г­Г Г·ГҐГ­ГЁГї epsilon
 
 
-	if (epsilon <= 0 || epsilon >= pow(10, -k) || x >= 1 || x <= -1)	// Проверка введённых значений
-	{																	// еpsilon и х по условию
+	if (epsilon <= 0 || epsilon >= pow(10, -k) || x >= 1 || x <= -1)	// ГЏГ°Г®ГўГҐГ°ГЄГ  ГўГўГҐГ¤ВёГ­Г­Г»Гµ Г§Г­Г Г·ГҐГ­ГЁГ©
+	{																	// ГҐpsilon ГЁ Гµ ГЇГ® ГіГ±Г«Г®ГўГЁГѕ
 		cout << "Epsilon does not satisfy condition \n";
 		system("pause");
 		return 0;
 	}
 
 
-	while (abs(previous_term) >= epsilon)				//Сравнение слагаемых с эпсилоном
+	while (abs(previous_term) >= epsilon)				//Г‘Г°Г ГўГ­ГҐГ­ГЁГҐ Г±Г«Г ГЈГ ГҐГ¬Г»Гµ Г± ГЅГЇГ±ГЁГ«Г®Г­Г®Г¬
 	{
-		previous_term *= -(2 * n - 1) * x / (2 * n);	//Вычисление каждого следующего члена ряда Тейлора
-		amount += previous_term;						//Сумма членов ряда Тейлора
+		previous_term *= -(2 * n - 1) * x / (2 * n);	//Г‚Г»Г·ГЁГ±Г«ГҐГ­ГЁГҐ ГЄГ Г¦Г¤Г®ГЈГ® Г±Г«ГҐГ¤ГіГѕГ№ГҐГЈГ® Г·Г«ГҐГ­Г  Г°ГїГ¤Г  Г’ГҐГ©Г«Г®Г°Г 
+		amount += previous_term;						//Г‘ГіГ¬Г¬Г  Г·Г«ГҐГ­Г®Гў Г°ГїГ¤Г  Г’ГҐГ©Г«Г®Г°Г 
 		++n;
 	}
 
 
 	cout << "1/sqrt(1+x)=  " << 1 / sqrt(1 + x) << "\t Amount= " << amount << '\n';
-	system("pause");				//Сравнение левой части функции с её правой частью, представленной в виде
-	return 0;						//ряда Тейлора.
+	system("pause");				//Г‘Г°Г ГўГ­ГҐГ­ГЁГҐ Г«ГҐГўГ®Г© Г·Г Г±ГІГЁ ГґГіГ­ГЄГ¶ГЁГЁ Г± ГҐВё ГЇГ°Г ГўГ®Г© Г·Г Г±ГІГјГѕ, ГЇГ°ГҐГ¤Г±ГІГ ГўГ«ГҐГ­Г­Г®Г© Гў ГўГЁГ¤ГҐ
+	return 0;						//Г°ГїГ¤Г  Г’ГҐГ©Г«Г®Г°Г .
 }
