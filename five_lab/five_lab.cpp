@@ -36,8 +36,16 @@ int main()
 		cin >> choice;
 		if (choice == 4)
 		{
-			system("pause");
-			return 0;
+			break;
+		}
+		else
+		{
+			if(choice < = 0 || choice > 4)
+			{
+				cout << "\nIncorrected choice\n";
+				system("pause");
+				return 0;
+			}
 		}
 
 		short k = 0;
@@ -52,7 +60,7 @@ int main()
 
 		if (k <= 0)
 		{
-			cout << "\nIncorrected k, try again\n";
+			cout << "\nIncorrected k.\n";
 			system("pause");
 			break;
 		}
@@ -91,7 +99,7 @@ int main()
 
 					default:
 					{
-					cout << "Incorrected input, try again :3\n";
+					cout << "Incorrected input, try again.\n";
 					break;
 					}
 				}
@@ -128,7 +136,7 @@ int main()
 
 					default:
 					{
-					cout << "Incorrected input, try again :3\n";
+					cout << "Incorrected input, try again.\n";
 					break;
 					}
 				}
@@ -164,7 +172,7 @@ int main()
 
 					default:
 					{
-					cout << "Incorrected input, try again :3\n";
+					cout << "Incorrected input, try again.\n";
 					break;
 					}
 				}
@@ -173,7 +181,7 @@ int main()
 
 			default:
 			{
-			cout << "\nIncorrected input, try again :3\n";
+			cout << "\nIncorrected input, try again.\n";
 			break;
 			}
 		}
