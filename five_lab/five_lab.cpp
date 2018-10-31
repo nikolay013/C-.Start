@@ -42,27 +42,31 @@ int main()
 		{
 			if(choice < = 0 || choice > 4)
 			{
-				cout << "\nIncorrected choice\n";
-				system("pause");
-				return 0;
+				cout << "\nIncorrected choice. Enter choice again.\n";
+				continue;
 			}
 		}
 
 		short k = 0;
 		double epsilon = 0;
-		cout << "Enter your k for epsilon (10^(-k)) : ";
-		cin >> k; k++;
-		epsilon = pow(10, -k);
-
 
 		float left_border = 0;
 		float right_border = 0;
 
-		if (k <= 0)
+		while (true)
 		{
-			cout << "\nIncorrected k.\n";
-			system("pause");
-			break;
+			cout << "\nEnter your k for epsilon (10^(-k)) : ";
+			cin >> k; k++;
+			epsilon = pow(10, -k);
+			if (k < = 0)
+			{
+				cout << "\nIncorrected k. Enter again.\n";
+				continue;
+			}
+			else
+			{
+				break;
+			}
 		}
 		
 
